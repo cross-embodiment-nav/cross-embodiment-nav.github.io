@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="X-Nav">
+  <meta name="keywords" content="Mobile Robot Navigation, Cross-Embodiment, Legged Robot">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>X-Nav: Learning End-to-End Cross-Embodiment Navigation for Mobile Robots</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+
+  <meta property="og:site_name" content="X-Nav" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="X-Nav: Cross-Embodiment Navigation" />
+  <meta property="og:description" content="A two-stage learning approach for end-to-end cross-embodiment navigation" />
+  <meta property="og:url" content="https://cross-embodiment-nav.github.io" />
+  <meta property="article:publisher" content="#" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="X-Nav: Cross-Embodiment Navigation" />
+  <meta name="twitter:description" content="A two-stage learning approach for end-to-end cross-embodiment navigation" />
+  <meta name="twitter:url" content="https://cross-embodiment-nav.github.io/" />
+  <meta name="twitter:site" content="@anonymous" />
+</head>
+
+
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths has-text-centered">
+          <h1 class="title is-1 publication-title">X-Nav: Learning End-to-End Cross-Embodiment Navigation for Mobile Robots</h1>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="">Haitong Wang</a>,
+            </span>
+            <span class="author-block">
+              <a href="">Aaron Hao Tan</a>,
+            </span>
+            <span class="author-block">
+              <a href="">Angus Fung</a>,
+            </span>
+            <span class="author-block">
+              <a href="">Goldie Nejat</a>
+            </span>
+          </div>
+          <div class="is-size-4 publication-authors">
+            <a href="http://asblab.mie.utoronto.ca/">Autonomous Systems and Biomechatronics Lab</a>
+          </div>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">University of Toronto</span>
+          </div>
+          
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- arXiv Link -->
+              <span class="link-block" style="margin-right: 15px;">
+                <a href="https://arxiv.org/abs/placeholder-arxiv-id" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link -->
+              <span class="link-block">
+                <a href="https://youtu.be/vGwR1Rqujjk" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background-color: #f8f9fa; padding: 40px 0;">
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Existing navigation methods are primarily designed for specific robot embodiments, limiting their generalizability across diverse robot platforms. In this paper, we introduce X-Nav, a novel framework for end-to-end cross-embodiment navigation where a single unified policy can be deployed across various embodiments for both wheeled and quadrupedal robots. X-Nav consists of two learning stages: 1) multiple expert policies are trained using deep reinforcement learning with privileged observations using a wide range of randomly generated robot embodiments; and 2) a single general policy is distilled from the expert policies via navigation action chunking with transformer (Nav-ACT). The general policy directly maps visual and proprioceptive observations to low-level control commands, enabling generalization to novel robot embodiments. Simulated experiments demonstrated that X-Nav can effectively achieve zero-shot transfer to both unseen embodiments and photorealistic environments. A scalability study showed that the performance of X-Nav scales with the increasing number of randomly generated embodiments used during training. An ablation study confirmed the design choices of X-Nav. Furthermore, real-world experiments were conducted to validate the generalizability of X-Nav in real-world environments.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <h2 class="title is-2" style="text-align: center;">Experiment Video</h2>
+        <div style="position: relative; width: 100%; max-width: 1100px; margin: 0 auto;">
+          <iframe width="100%" height="619" src="https://www.youtube.com/embed/vGwR1Rqujjk" title="X-Nav Experiment Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <!-- Architecture Title and Description -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">X-Nav Architecture</h2>
+        <div class="content has-text-justified">
+          <p>
+            The proposed X-Nav framework consists of two stages: 1) Expert Policy Learning, and 2) General Policy Distillation. In Stage 1, multiple expert policies are trained on randomly generated robot embodiments using deep reinforcement learning with privileged observations. In Stage 2, the knowledge of expert policies is distilled into a single general policy using imitation learning.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Architecture Image -->
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <img src="./static/images/architecture.svg" alt="X-Nav Architecture Diagram" style="width: 100%; max-width: 1100px; margin: 20px auto; display: block;">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>Page template from <a href="https://nerfies.github.io/"><span class="dnerf">Nerfies</span></a> and <a href="https://robot-parkour.github.io/"><span class="dnerf">Robot Parkour Learning</span></a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
